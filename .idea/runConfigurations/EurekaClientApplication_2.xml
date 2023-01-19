@@ -1,0 +1,21 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="EurekaClientApplication-2" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <option name="ACTIVE_PROFILES" />
+    <module name="eureka-client-02-a" />
+    <option name="PROGRAM_PARAMETERS" value="--server.port=8087" />
+    <selectedOptions>
+      <option name="spring.boot.profiles" visible="false" />
+      <option name="environmentVariables" />
+    </selectedOptions>
+    <option name="SPRING_BOOT_MAIN_CLASS" value="com.kul.EurekaClientApplication" />
+    <extension name="coverage">
+      <pattern>
+        <option name="PATTERN" value="com.kul.*" />
+        <option name="ENABLED" value="true" />
+      </pattern>
+    </extension>
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
