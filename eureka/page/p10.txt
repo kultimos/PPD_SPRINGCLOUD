@@ -1,0 +1,7 @@
+集群的深入理解
+1.如果是主从模式 主机该怎么选择
+2.如果是主从模式 数据是如何同步的
+
+了解一下分布式数据一致性协议  Paxos  raft( 动画理解地址:  http://thesecretlivesofdata.com/raft/)
+zk是 Paxos
+Nacos是 raft
