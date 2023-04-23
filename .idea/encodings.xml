@@ -3,7 +3,13 @@
   <component name="Encoding" defaultCharsetForPropertiesFiles="GBK">
     <file url="file://$PROJECT_DIR$/eureka/eureka-client-02-a/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/eureka/eureka-client-02-b/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eureka/eureka-server-01-b/eureka-server-01-b/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/eureka/eureka-server-01/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/eureka/eureka-server-01/src/main/resources/application.properties" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/eureka/eureka-server-01/src/main/resources/application.yml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/eureka/eureka-server-02/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eureka/eureka-server-03/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eureka/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eureka/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
   </component>
 </project>
