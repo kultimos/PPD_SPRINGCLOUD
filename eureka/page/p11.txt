@@ -1,0 +1,17 @@
+源码理解Eureka的注册流程
+InstanceInfo这个类会将配置文件的信息回显到InstanceInfo这个类对象中
+然后通过调用register()方法,开始像server-client发送一个携带InstanceInfo的post请求
+
+真正的注册是server端
+首先是     read.lock();
+然后将信息存入一个map    Map<String, Lease<InstanceInfo>> gMap = registry.get(registrant.getAppName());
+上面的registry的数据结构是 private final ConcurrentHashMap<String, Map<String, Lease<InstanceInfo>>> registry
+                              = new ConcurrentHashMap<String, Map<String, Lease<InstanceInfo>>>();
+
+Eureka的注册流程是当启动服务时，首先作为一个client端调用一个register方法向sever端发送一个Post注册请求,
+请求体中包含了一个对象InstanceInfo,该对象的属性值是由配置文件application.yml映射过来的;
+server端收到请求后开始注册该client,注册数据会保存到一个concurrentHashmap中
+concurrentHashmap的结构是<String, Map<String, Lease<InstanceInfo>>
+concurrentHashmap的外层key是应用名称即yml中的spring.application.name
+内层key是应用的实例id即yml中的eureka.instance.instance-id
+内层的value是具体的服务节点信息 即yml映射的InstanceInfo对象
