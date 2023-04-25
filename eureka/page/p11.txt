@@ -15,3 +15,9 @@ concurrentHashmap的结构是<String, Map<String, Lease<InstanceInfo>>
 concurrentHashmap的外层key是应用名称即yml中的spring.application.name
 内层key是应用的实例id即yml中的eureka.instance.instance-id
 内层的value是具体的服务节点信息 即yml映射的InstanceInfo对象
+
+接p12
+其实本质上来说Eureka的注册,心跳机制,服务下线(主动、被动)
+就是增删改查,注册实际上就是一个新增的post
+心跳机制呢就是不断地更新服务的有效期,只要服务仍在在有效期以内,那么该服务就是可用的,心跳就是不断更新服务的最后更新时间,使其有效期一直延长
+服务的下线也是在判断有效期,一旦过期,那么就会被动下线,sever就会将该服务剔除,如果client主动下线就是调用一个remove方法将服务从注册列表的concurrentHashmap中移除
