@@ -9,7 +9,11 @@ eureka:
     hostname: peer1
     prefer-ip-address: true
     lease-renewal-interval-in-seconds: 5
-
+  client:
+    service-url:
+      defaultZone: ${EUREKA_SERVER_URL:http://localhost:8761/eureka}
+    register-with-eureka: ${REGISTER_WITH_EUREKA:true}
+    fetch-registry: ${FETCH_REGISTRY:true}
 
 
 
