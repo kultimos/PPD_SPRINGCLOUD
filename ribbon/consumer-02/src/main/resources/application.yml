@@ -19,3 +19,13 @@ eureka:
 #provider:
 #  ribbon:
 #    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+ribbon:
+  eager-load:
+    enabled: true # true表示ribbon会在服务刚启动时就获取服务列表,false表示ribbon采用懒加载,当真正有服务发起调用时才会获取服务列表,默认false懒加载
+  eureka:
+    enabled: true # 开启eureka支持,默认支持
+  http:
+    client: # 源生的restTemplate发送http请求的方式不支持连接池,所以当访问量较高时,效率不是很高;
+      enabled: false #而httpclient的配置true表示将开启httpclient进行http请求的发送,httpclient支持连接池,所以效率会有提升,不过开启这个是需要添加依赖的
+  okhttp: # okhttp在移动端用的较多,比较轻量
+    enabled: false
