@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="springcloud" />
         <module name="eureka-server-01" />
+        <module name="restTemplate" />
         <module name="eureka" />
         <module name="rest-template" />
         <module name="ribbon" />
@@ -37,6 +38,7 @@
       <module name="provider-a-01" options="-parameters" />
       <module name="provider-b-01" options="-parameters" />
       <module name="rest-template" options="-parameters" />
+      <module name="restTemplate" options="-parameters" />
       <module name="ribbon" options="-parameters" />
       <module name="root" options="-parameters" />
       <module name="springcloud" options="-parameters" />

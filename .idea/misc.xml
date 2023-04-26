@@ -18,6 +18,7 @@
         <option value="$PROJECT_DIR$/ribbon/provider-a-01/pom.xml" />
         <option value="$PROJECT_DIR$/ribbon/provider-b-01/pom.xml" />
         <option value="$PROJECT_DIR$/ribbon/consumer-02/pom.xml" />
+        <option value="$PROJECT_DIR$/eureka/restTemplate/pom.xml" />
       </list>
     </option>
   </component>
