@@ -20,6 +20,8 @@
         <module name="provider-a-01" />
         <module name="provider-b-01" />
         <module name="root" />
+        <module name="provider-b" />
+        <module name="provider-a" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -35,7 +37,9 @@
       <module name="eureka-server-01-b" options="-parameters" />
       <module name="eureka-server-02" options="-parameters" />
       <module name="eureka-server-03" options="-parameters" />
+      <module name="provider-a" options="-parameters" />
       <module name="provider-a-01" options="-parameters" />
+      <module name="provider-b" options="-parameters" />
       <module name="provider-b-01" options="-parameters" />
       <module name="rest-template" options="-parameters" />
       <module name="restTemplate" options="-parameters" />

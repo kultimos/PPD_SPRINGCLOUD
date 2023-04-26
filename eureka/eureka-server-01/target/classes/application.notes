@@ -1,0 +1,40 @@
+##------------------------------------------------------ 单机版配置 properties写法
+#server.port=8761
+#spring.application.name=ws-eureka-server
+#
+#
+##续约时间即扫描失效服务的间隔时间
+#eureka.server.eviction-interval-timer-in-ms=10000
+#
+##续约百分比 如果超过85%的应用没有续约,那么eureka会触发自我保护机制,也就不会剔除任何一个应用
+#eureka.server.renewal-percent-threshold=0.85
+#
+#eureka.instance.instance-id=${eureka.instance.hostname}:${spring.application.name}:${server.port}
+#eureka.instance.hostname=localhost
+#
+##勾选为true表示:当鼠标悬停在Eureka服务上时,左下角显示服务的Ip地址;若是false:则不会显示ip
+#eureka.instance.prefer-ip-address=true
+#
+##服务实例的续约时间间隔
+#eureka.instance.lease-renewal-interval-in-seconds=5
+#
+#logging.level.com.netflix=warn
+
+
+
+
+#-------------------------------------------------- 集群版配置 yml写法
+server:
+  port: 8761
+spring:
+  application:
+    name: eureka-server
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8762/eureka,http://localhost:8763/eureka
+  instance:
+    instance-id: ${eureka.instance.hostname}:${spring.application.name}:${server.port}
+    hostname: localhost
+    prefer-ip-address: true
+    lease-renewal-interval-in-seconds: 5
