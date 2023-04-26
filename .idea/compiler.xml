@@ -9,8 +9,8 @@
         <module name="springcloud" />
         <module name="eureka-server-01" />
         <module name="restTemplate" />
-        <module name="eureka" />
         <module name="rest-template" />
+        <module name="eureka" />
         <module name="ribbon" />
         <module name="eureka-client-02-a" />
         <module name="eureka-client-02-b" />
@@ -21,6 +21,7 @@
         <module name="provider-b-01" />
         <module name="root" />
         <module name="provider-b" />
+        <module name="consumer" />
         <module name="provider-a" />
       </profile>
     </annotationProcessing>
@@ -30,6 +31,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="consumer" options="-parameters" />
       <module name="consumer-02" options="-parameters" />
       <module name="eureka-client-02-a" options="-parameters" />
       <module name="eureka-client-02-b" options="-parameters" />

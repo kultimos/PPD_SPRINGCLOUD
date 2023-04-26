@@ -1,6 +1,6 @@
 
 server:
-  port: 8055
+  port: 8044
 spring:
   application:
     name: consumer
@@ -12,3 +12,10 @@ eureka:
     hostname: localhost
     prefer-ip-address: true
     instance-id: ${eureka.instance.hostname}:${spring.application.name}:${server.port}
+
+# 访问不同服务可以使用不同算法规则
+# 第一行的provider对应的是我们的客户机在eureka中注册的名字
+# 需要注意yml中要严格缩进,否则不会生效
+#provider:
+#  ribbon:
+#    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
