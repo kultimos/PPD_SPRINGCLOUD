@@ -11,6 +11,9 @@
     <file url="file://$PROJECT_DIR$/eureka/restTemplate/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/eureka/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/eureka/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/openfeign/order-service-01/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/openfeign/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/openfeign/user-service-01/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ribbon/consumer-02/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ribbon/provider-a-01/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ribbon/provider-a/src/main/java" charset="UTF-8" />
