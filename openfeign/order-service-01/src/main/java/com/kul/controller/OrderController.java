@@ -19,4 +19,9 @@ public class OrderController {
         return "豆浆油条";
     }
 
+    @GetMapping("test")
+    public String test() {
+        return "test";
+    }
+
 }

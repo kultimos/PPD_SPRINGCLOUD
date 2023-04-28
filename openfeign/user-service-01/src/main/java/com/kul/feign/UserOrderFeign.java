@@ -9,4 +9,7 @@ public interface UserOrderFeign {
 
     @GetMapping("doOrder")
     public String doOrder();
+
+    @GetMapping("test")
+    public String test();
 }
