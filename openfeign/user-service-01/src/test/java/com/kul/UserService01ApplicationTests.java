@@ -9,9 +9,14 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.client.RestTemplate;
 
+import javax.xml.crypto.Data;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 @SpringBootTest
 class UserService01ApplicationTests {
@@ -30,10 +35,10 @@ class UserService01ApplicationTests {
             public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
                 //获取GetMapping修饰的注解相关信息
                 GetMapping annotation = method.getAnnotation(GetMapping.class);
-                //拿到该注解的修饰的方法名
+                //拿到该注解的值即GetMapping的value值,用于指定访问的接口,会拼接到ribbon请求的url中
                 String paths[] = annotation.value();
                 String path = paths[0];
-                //拿到传入的method方法的声明类
+                //找到传入的method方法的声明类 通过我们调用的doOrder找到了我们的UserOrderFeign接口
                 Class<?> aClass = method.getDeclaringClass();
                 //获取该声明类配置的拥有@feignClient注解的接口
                 FeignClient annotation1 = aClass.getAnnotation(FeignClient.class);
