@@ -1,0 +1,18 @@
+
+server:
+  port: 8061
+spring:
+  application:
+    name: user-service
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+# feign只是帮你封装了远程调用的功能,底层还是ribbon,所以我们如果想修改feign的配置则需要修改ribbon的配置信息
+ribbon:
+  ReadTimeout: 5000 #调用超时时间限制,单位ms
+  ConnectTimeout: 5000 #连接超时时间限制,单位ms
+logging:
+  level:
+    com.kul.feign.UserOrderFeign: debug
+#    表示需要上面指定接口下的日志

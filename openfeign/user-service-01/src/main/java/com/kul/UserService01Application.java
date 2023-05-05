@@ -1,5 +1,6 @@
 package com.kul;
 
+import feign.Logger;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
@@ -22,5 +23,14 @@ public class UserService01Application {
     @LoadBalanced
     public RestTemplate restTemplate() {
         return new RestTemplate();
+    }
+
+    /**
+     * 打印feign日志信息级别设置为全部
+     * @return
+     */
+    @Bean
+    public Logger.Level level(){
+        return Logger.Level.FULL;
     }
 }
