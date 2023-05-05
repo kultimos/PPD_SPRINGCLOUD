@@ -9,10 +9,12 @@
         <module name="openfeign" />
         <module name="user-service-01" />
         <module name="springcloud" />
+        <module name="hystrix" />
         <module name="eureka-server-01" />
         <module name="restTemplate" />
         <module name="rest-template" />
         <module name="eureka" />
+        <module name="rent-car-service-01" />
         <module name="ribbon" />
         <module name="eureka-client-02-a" />
         <module name="eureka-client-02-b" />
@@ -20,6 +22,7 @@
         <module name="consumer-02" />
         <module name="eureka-server-03" />
         <module name="order-service-01" />
+        <module name="customer-service-01" />
         <module name="provider-a-01" />
         <module name="provider-b-01" />
         <module name="root" />
@@ -36,18 +39,21 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="consumer" options="-parameters" />
       <module name="consumer-02" options="-parameters" />
+      <module name="customer-service-01" options="-parameters" />
       <module name="eureka-client-02-a" options="-parameters" />
       <module name="eureka-client-02-b" options="-parameters" />
       <module name="eureka-server-01" options="-parameters" />
       <module name="eureka-server-01-b" options="-parameters" />
       <module name="eureka-server-02" options="-parameters" />
       <module name="eureka-server-03" options="-parameters" />
+      <module name="hystrix" options="-parameters" />
       <module name="openfeign" options="-parameters" />
       <module name="order-service-01" options="-parameters" />
       <module name="provider-a" options="-parameters" />
       <module name="provider-a-01" options="-parameters" />
       <module name="provider-b" options="-parameters" />
       <module name="provider-b-01" options="-parameters" />
+      <module name="rent-car-service-01" options="-parameters" />
       <module name="rest-template" options="-parameters" />
       <module name="restTemplate" options="-parameters" />
       <module name="ribbon" options="-parameters" />

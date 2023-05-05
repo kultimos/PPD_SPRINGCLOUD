@@ -24,6 +24,9 @@
         <option value="$PROJECT_DIR$/openfeign/pom.xml" />
         <option value="$PROJECT_DIR$/openfeign/order-service-01/pom.xml" />
         <option value="$PROJECT_DIR$/openfeign/user-service-01/pom.xml" />
+        <option value="$PROJECT_DIR$/hystrix/pom.xml" />
+        <option value="$PROJECT_DIR$/hystrix/customer-service-01/pom.xml" />
+        <option value="$PROJECT_DIR$/hystrix/rent-car-service-01/pom.xml" />
       </list>
     </option>
   </component>
