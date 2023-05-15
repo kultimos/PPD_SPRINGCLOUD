@@ -14,6 +14,7 @@
     <file url="file://$PROJECT_DIR$/hystrix/customer-service-01/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/hystrix/rent-car-service-01/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/hystrix/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hystrix/water-bear/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/openfeign/order-service-01/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/openfeign/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/openfeign/user-service-01/src/main/java" charset="UTF-8" />
