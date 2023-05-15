@@ -34,6 +34,8 @@ public class HystrixModel {
      */
     public static final Integer MAX_FAIL_COUNT = 3;
 
+    private Object lock = new Object();
+
     public ThreadPoolExecutor executor = new ThreadPoolExecutor(
             4,8,30,TimeUnit.SECONDS,
             new LinkedBlockingDeque<>(2000), Executors.defaultThreadFactory(),
@@ -52,7 +54,18 @@ public class HystrixModel {
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
                 }
-                this.currentFailCount.set(0);
+                if(this.status.equals(HystrixSwitchStatus.CLOSED)){
+                    //如果断路器状态为CLOSED,则清零
+                    this.currentFailCount.set(0);
+                } else {
+                    synchronized (lock) {
+                        try {
+                            lock.wait();
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                    }
+                }
             }
         });
     }

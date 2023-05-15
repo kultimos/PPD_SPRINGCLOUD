@@ -51,6 +51,9 @@ public class HystrixAspect {
                     try {
                         result = joinPoint.proceed();
                         hystrixModel.setStatus(HystrixSwitchStatus.CLOSED);
+                        synchronized (hystrixModel) {
+                            hystrixModel.notifyAll();
+                        }
                         return result;
                     } catch (Throwable e) {
                         return "分流请求,但是调用失败了";
