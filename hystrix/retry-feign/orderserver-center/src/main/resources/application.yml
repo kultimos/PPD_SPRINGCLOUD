@@ -3,6 +3,12 @@ server:
 spring:
   application:
     name: my-order-service
+  zipkin:
+    base-url: http://localhost:9411
+  sleuth:
+    sampler:
+      probability: 1.0
+      rate: 10
 eureka:
   client:
     service-url:

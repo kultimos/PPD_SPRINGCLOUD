@@ -1,0 +1,11 @@
+链路追踪
+需要在本地启动jar包，然后在浏览器中访问http://localhost:9411/zipkin/，即可查看链路追踪信息
+并且在配置文件yml中添加如下配置
+```yaml
+spring:
+  zipkin:
+    base-url: http://localhost:9411/
+  sleuth:
+    sampler:
+      probability: 1.0
+```
