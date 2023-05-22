@@ -28,7 +28,17 @@
         <option value="$PROJECT_DIR$/hystrix/customer-service-01/pom.xml" />
         <option value="$PROJECT_DIR$/hystrix/rent-car-service-01/pom.xml" />
         <option value="$PROJECT_DIR$/hystrix/water-bear/pom.xml" />
+        <option value="$PROJECT_DIR$/hystrix/01-feign-project/pom.xml" />
+        <option value="$PROJECT_DIR$/hystrix/retry-feign/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/hystrix/01-feign-project/domain/pom.xml" />
+        <option value="$PROJECT_DIR$/hystrix/01-feign-project/user-center/pom.xml" />
+        <option value="$PROJECT_DIR$/hystrix/retry-feign/common-api/pom.xml" />
+        <option value="$PROJECT_DIR$/hystrix/retry-feign/user-manage/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK" />

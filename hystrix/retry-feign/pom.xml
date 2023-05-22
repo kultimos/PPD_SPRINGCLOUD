@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <modules>
+        <module>project-domain</module>
+        <module>server-api</module>
+        <module>userserver-center</module>
+        <module>orderserver-center</module>
+    </modules>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.3.12.RELEASE</version>
+    </parent>
+
+    <packaging>pom</packaging>
+
+    <groupId>com.kul</groupId>
+    <artifactId>retry-feign</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>retry-feign</name>
+    <description>retry-feign</description>
+
+    <!-- 定义全局版本控制,定义版本号 -->
+    <properties>
+        <java.version>8</java.version>
+        <spring-cloud.version>Hoxton.SR12</spring-cloud.version>
+    </properties>
+
+    <!-- 全局依赖 这里声明的依赖,所有子模块都会有-->
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+    </dependencies>
+
+    <!-- 也是依赖管理,但是这里声明的依赖不会被引入项目,但是规定了版本信息,子模块引入必须使用规定的版本-->
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>

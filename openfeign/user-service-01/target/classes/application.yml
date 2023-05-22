@@ -11,7 +11,7 @@ eureka:
 
 ribbon:
   ReadTimeout: 5000
-  ConnectTimeout: 5000 #
+  ConnectTimeout: 5000
 logging:
   level:
     com.kul.feign.UserOrderFeign: debug

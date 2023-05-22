@@ -1,46 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
+    <excludeFromCompile>
+      <directory url="file://$PROJECT_DIR$/hystrix/01-feign-project/order-center/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/hystrix/01-feign-project/domain-project/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/hystrix/01-feign-project/api-project/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/hystrix/retry-feign/common-api/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/hystrix/retry-feign/userserver-center/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/hystrix/retry-feign/orderserver-center/src/main/resources/archetype-resources" includeSubdirectories="true" />
+    </excludeFromCompile>
     <annotationProcessing>
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="openfeign" />
         <module name="user-service-01" />
         <module name="springcloud" />
-        <module name="hystrix" />
-        <module name="eureka-server-01" />
         <module name="restTemplate" />
-        <module name="rest-template" />
         <module name="rent-car-service-01" />
         <module name="eureka" />
-        <module name="ribbon" />
+        <module name="project-domain" />
+        <module name="server-api" />
         <module name="eureka-client-02-a" />
         <module name="water-bear" />
         <module name="eureka-client-02-b" />
+        <module name="user-service" />
+        <module name="customer-service-01" />
+        <module name="provider-b-01" />
+        <module name="root" />
+        <module name="orderserver-center" />
+        <module name="consumer" />
+        <module name="openfeign" />
+        <module name="hystrix" />
+        <module name="eureka-server-01" />
+        <module name="customer-service" />
+        <module name="rest-template" />
+        <module name="userserver-center" />
+        <module name="ribbon" />
+        <module name="rent-car-service" />
         <module name="eureka-server-02" />
         <module name="consumer-02" />
         <module name="eureka-server-03" />
         <module name="order-service-01" />
-        <module name="customer-service-01" />
         <module name="provider-a-01" />
-        <module name="provider-b-01" />
-        <module name="root" />
+        <module name="order-service" />
         <module name="provider-b" />
-        <module name="consumer" />
         <module name="provider-a" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="01-feign-project" target="1.8" />
+      <module name="api-project" target="1.8" />
+      <module name="common-api" target="1.8" />
+      <module name="domain" target="1.8" />
+      <module name="domain-project" target="1.8" />
       <module name="eureka-server-01-b" target="1.8" />
+      <module name="order-center" target="1.8" />
+      <module name="user-center" target="1.8" />
+      <module name="user-conter" target="1.8" />
+      <module name="user-manage" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="01-feign-project" options="" />
+      <module name="api-project" options="" />
+      <module name="common-api" options="-parameters" />
       <module name="consumer" options="-parameters" />
       <module name="consumer-02" options="-parameters" />
+      <module name="customer-service" options="-parameters" />
       <module name="customer-service-01" options="-parameters" />
+      <module name="domain" options="-parameters" />
+      <module name="domain-project" options="" />
       <module name="eureka-client-02-a" options="-parameters" />
       <module name="eureka-client-02-b" options="-parameters" />
       <module name="eureka-server-01" options="-parameters" />
@@ -49,18 +80,30 @@
       <module name="eureka-server-03" options="-parameters" />
       <module name="hystrix" options="-parameters" />
       <module name="openfeign" options="-parameters" />
+      <module name="order-center" options="-parameters" />
+      <module name="order-service" options="-parameters" />
       <module name="order-service-01" options="-parameters" />
+      <module name="orderserver-center" options="-parameters" />
+      <module name="project-domain" options="-parameters" />
       <module name="provider-a" options="-parameters" />
       <module name="provider-a-01" options="-parameters" />
       <module name="provider-b" options="-parameters" />
       <module name="provider-b-01" options="-parameters" />
+      <module name="rent-car-service" options="-parameters" />
       <module name="rent-car-service-01" options="-parameters" />
       <module name="rest-template" options="-parameters" />
       <module name="restTemplate" options="-parameters" />
+      <module name="retry-feign" options="" />
       <module name="ribbon" options="-parameters" />
       <module name="root" options="-parameters" />
+      <module name="server-api" options="-parameters" />
       <module name="springcloud" options="-parameters" />
+      <module name="user-center" options="-parameters" />
+      <module name="user-conter" options="-parameters" />
+      <module name="user-manage" options="-parameters" />
+      <module name="user-service" options="-parameters" />
       <module name="user-service-01" options="-parameters" />
+      <module name="userserver-center" options="-parameters" />
       <module name="water-bear" options="-parameters" />
     </option>
   </component>
