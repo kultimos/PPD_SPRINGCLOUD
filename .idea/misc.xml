@@ -30,6 +30,7 @@
         <option value="$PROJECT_DIR$/hystrix/water-bear/pom.xml" />
         <option value="$PROJECT_DIR$/hystrix/01-feign-project/pom.xml" />
         <option value="$PROJECT_DIR$/hystrix/retry-feign/pom.xml" />
+        <option value="$PROJECT_DIR$/admin-server/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

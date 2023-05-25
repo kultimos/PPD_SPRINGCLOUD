@@ -18,8 +18,8 @@
         <module name="springcloud" />
         <module name="restTemplate" />
         <module name="rent-car-service-01" />
-        <module name="eureka" />
         <module name="project-domain" />
+        <module name="eureka" />
         <module name="server-api" />
         <module name="eureka-client-02-a" />
         <module name="water-bear" />
@@ -43,6 +43,7 @@
         <module name="eureka-server-03" />
         <module name="order-service-01" />
         <module name="provider-a-01" />
+        <module name="admin-server" />
         <module name="order-service" />
         <module name="provider-b" />
         <module name="provider-a" />
@@ -64,6 +65,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="01-feign-project" options="" />
+      <module name="admin-server" options="-parameters" />
       <module name="api-project" options="" />
       <module name="common-api" options="-parameters" />
       <module name="consumer" options="-parameters" />
