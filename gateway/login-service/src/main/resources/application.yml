@@ -3,3 +3,11 @@ server:
 spring:
   application:
     name: login-service
+eureka:
+  instance:
+    hostname: localhost
+    instance-id: ${eureka.instance.hostname}:${spring.application.name}:${server.port}
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+    registry-fetch-interval-seconds: 3  # 从Eureka Server获取注册信息的时间间隔（秒）

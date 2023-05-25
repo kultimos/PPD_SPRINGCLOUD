@@ -6,14 +6,29 @@ spring:
   cloud:
     gateway:
       enabled: true #ֻҪ��������,Ĭ�Ͽ���
-      routes:
-        - id: login-service-route #·�ɵ�id,û�й̶�����Ҫ��Ψһ,������Ϸ�����
-          uri: http://localhost:8106 #ƥ����ṩ�����·�ɵ�ַ
-          predicates: #����,·����ƥ��Ľ���·��
-            - Path=/login
-        - id: dance-id" #·�ɵ�id,û�й̶�����Ҫ��Ψһ,������Ϸ�����
-          uri: http://www.baidu.com #ƥ����ṩ�����·�ɵ�ַ
-          predicates: #����,·����ƥ��Ľ���·��
-            - Path=/dance
-#          filters: #������,���Զ�������һЩ����
-#            - StripPrefix=1 #ȥ������ǰ׺
+      discovery: #������ע�����Ķ�̬����·�ɵĹ���,����΢����������·��;Ҳ���Ƕ�̬·��
+        locator:
+          enabled: true
+          lower-case-service-id: true #������,�������ƿ�ת��ΪСд
+
+#      routes:  #�ⶼ�Ǿ�̬·��
+#        - id: login-service-route #·�ɵ�id,û�й̶�����Ҫ��Ψһ,������Ϸ�����
+#          uri: http://localhost:8106 #ƥ����ṩ�����·�ɵ�ַ
+#          predicates: #����,·����ƥ��Ľ���·��
+#            - Path=/login
+#        - id: dance-id" #·�ɵ�id,û�й̶�����Ҫ��Ψһ,������Ϸ�����
+#          uri: http://www.baidu.com #ƥ����ṩ�����·�ɵ�ַ
+#          predicates: #����,·����ƥ��Ľ���·��
+#            - Path=/dance
+##          filters: #������,���Զ�������һЩ����
+##            - StripPrefix=1 #ȥ������ǰ׺
+
+
+eureka:
+  instance:
+    hostname: localhost
+    instance-id: ${eureka.instance.hostname}:${spring.application.name}:${server.port}
+    client:
+      service-url:
+        defaultZone: http://localhost:8761/eureka/
+      registry-fetch-interval-seconds: 3  # ��Eureka Server��ȡע����Ϣ��ʱ�������룩

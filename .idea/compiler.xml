@@ -30,8 +30,8 @@
         <module name="root" />
         <module name="orderserver-center" />
         <module name="consumer" />
-        <module name="openfeign" />
         <module name="login-service" />
+        <module name="openfeign" />
         <module name="hystrix" />
         <module name="eureka-server-01" />
         <module name="customer-service" />
