@@ -11,5 +11,9 @@ spring:
           uri: http://localhost:8106 #ƥ����ṩ�����·�ɵ�ַ
           predicates: #����,·����ƥ��Ľ���·��
             - Path=/login
+        - id: dance-id" #·�ɵ�id,û�й̶�����Ҫ��Ψһ,������Ϸ�����
+          uri: http://www.baidu.com #ƥ����ṩ�����·�ɵ�ַ
+          predicates: #����,·����ƥ��Ľ���·��
+            - Path=/dance
 #          filters: #������,���Զ�������һЩ����
 #            - StripPrefix=1 #ȥ������ǰ׺
