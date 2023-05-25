@@ -1,0 +1,15 @@
+server:
+  port: 80
+spring:
+  application:
+    name: gateway-server
+  cloud:
+    gateway:
+      enabled: true #ֻҪ��������,Ĭ�Ͽ���
+      routes:
+        - id: login-service-route #·�ɵ�id,û�й̶�����Ҫ��Ψһ,������Ϸ�����
+          uri: http://localhost:8106 #ƥ����ṩ�����·�ɵ�ַ
+          predicates: #����,·����ƥ��Ľ���·��
+            - Path=/login
+#          filters: #������,���Զ�������һЩ����
+#            - StripPrefix=1 #ȥ������ǰ׺

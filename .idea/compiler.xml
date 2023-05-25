@@ -18,8 +18,8 @@
         <module name="springcloud" />
         <module name="restTemplate" />
         <module name="rent-car-service-01" />
-        <module name="project-domain" />
         <module name="eureka" />
+        <module name="project-domain" />
         <module name="server-api" />
         <module name="eureka-client-02-a" />
         <module name="water-bear" />
@@ -31,6 +31,7 @@
         <module name="orderserver-center" />
         <module name="consumer" />
         <module name="openfeign" />
+        <module name="login-service" />
         <module name="hystrix" />
         <module name="eureka-server-01" />
         <module name="customer-service" />
@@ -44,8 +45,10 @@
         <module name="order-service-01" />
         <module name="provider-a-01" />
         <module name="admin-server" />
+        <module name="gateway-server" />
         <module name="order-service" />
         <module name="provider-b" />
+        <module name="gateway" />
         <module name="provider-a" />
       </profile>
     </annotationProcessing>
@@ -80,7 +83,9 @@
       <module name="eureka-server-01-b" options="-parameters" />
       <module name="eureka-server-02" options="-parameters" />
       <module name="eureka-server-03" options="-parameters" />
+      <module name="gateway-server" options="-parameters" />
       <module name="hystrix" options="-parameters" />
+      <module name="login-service" options="-parameters" />
       <module name="openfeign" options="-parameters" />
       <module name="order-center" options="-parameters" />
       <module name="order-service" options="-parameters" />

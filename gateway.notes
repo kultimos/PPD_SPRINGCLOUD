@@ -1,0 +1,22 @@
+Spring Cloud Gateway 三大核心概念
+1.Route(路由) (重点是和eureka结合做动态路由)
+    路由信息的组成:
+    一个ID、一个目标URI、一组断言工厂和一组过滤器Filter
+    如果路由断言为true,则说明请求URL和配置路由相匹配
+
+2.Predicate(断言) (就是一个返回boolean的表达式)
+    Java8中的断言函数
+    lambda四大接口: 供给型、消费型、断言型、函数型
+    SpringCloud Gateway中的断言函数输入类型是Spring5.0框架中的ServerWebExchange;
+    SpringCloud Gateway中的断言函数允许开发者去定义匹配来自于HTTP请求中的任何信息,比如请求头和参数等
+
+3.Filter(过滤) (重点)
+    一个标准的SpringWebFilter
+    SpringCloud Gateway中的Filter分为两种类型:分别是GatewayFilter和GlobalFilter
+    过滤器Filter可以对请求和响应进行修改
+    一个是针对某一个路由(路径)的GatewayFilter,对某一个接口做限流
+    一个是应用到所有路由的GlobalFilter,token ip黑名单
+
+
+gateway和nginx的最大区别在于二者的作用域
+gateway是微服务项目级别的,而nginx是服务器级别的
