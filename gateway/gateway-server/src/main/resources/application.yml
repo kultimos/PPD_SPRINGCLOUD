@@ -5,24 +5,16 @@ spring:
     name: gateway-server
   cloud:
     gateway:
-      enabled: true #只要加了依赖,默认开启
-      discovery: #开启从注册中心动态创建路由的功能,利用微服务名进行路由;也就是动态路由
-        locator:
-          enabled: true
-          lower-case-service-id: true #开启后,服务名称可转换为小写
-
-#      routes:  #这都是静态路由
-#        - id: login-service-route #路由的id,没有固定规则但要求唯一,建议配合服务名
-#          uri: http://localhost:8106 #匹配后提供服务的路由地址
-#          predicates: #断言,路径相匹配的进行路由
-#            - Path=/login
-#        - id: dance-id" #路由的id,没有固定规则但要求唯一,建议配合服务名
-#          uri: http://www.baidu.com #匹配后提供服务的路由地址
-#          predicates: #断言,路径相匹配的进行路由
-#            - Path=/dance
-##          filters: #过滤器,可以对请求做一些限制
-##            - StripPrefix=1 #去掉请求前缀
-
+      enabled: true
+      routes:
+        - id: login-service-route
+          uri: http://localhost:8106
+          predicates:
+            - Path=/login
+        - id: dance-id
+          uri: https://www.bilibili.com
+          predicates:
+            - Path=/v/knowledge
 
 eureka:
   instance:
@@ -31,4 +23,4 @@ eureka:
     client:
       service-url:
         defaultZone: http://localhost:8761/eureka/
-      registry-fetch-interval-seconds: 3  # 从Eureka Server获取注册信息的时间间隔（秒）
+      registry-fetch-interval-seconds: 3

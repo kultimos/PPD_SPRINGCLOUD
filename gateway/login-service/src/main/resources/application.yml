@@ -10,4 +10,4 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka/
-    registry-fetch-interval-seconds: 3  # 从Eureka Server获取注册信息的时间间隔（秒）
+    registry-fetch-interval-seconds: 3
