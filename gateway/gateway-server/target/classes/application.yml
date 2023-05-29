@@ -6,16 +6,20 @@ spring:
   cloud:
     gateway:
       enabled: true
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
       routes:
         - id: login-service-route
           uri: http://localhost:8106
           predicates:
             - Path=/login
+            - After=2023-05-29T09:59:48.455+08:00[Asia/Shanghai]
         - id: dance-id
           uri: https://www.bilibili.com
           predicates:
             - Path=/v/knowledge
-
 eureka:
   instance:
     hostname: localhost
