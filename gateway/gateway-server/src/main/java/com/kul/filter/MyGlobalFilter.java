@@ -49,8 +49,8 @@ public class MyGlobalFilter implements GlobalFilter, Ordered {
             throw new RuntimeException(e);
         }
         DataBuffer wrap = response.bufferFactory().wrap(bytes); //通过包装工厂将字节数组包装成一个数据包
-        return response.writeWith(Mono.just(wrap));
-//        return chain.filter(exchange); //放行,如果不放行,就不会继续执行后面的过滤器;过滤器可能会有多个,所以需要过滤器链
+//        return response.writeWith(Mono.just(wrap));
+        return chain.filter(exchange); //放行,如果不放行,就不会继续执行后面的过滤器;过滤器可能会有多个,所以需要过滤器链
     }
 
     /**
@@ -59,6 +59,6 @@ public class MyGlobalFilter implements GlobalFilter, Ordered {
      */
     @Override
     public int getOrder() {
-        return 0;
+        return 4;
     }
 }
