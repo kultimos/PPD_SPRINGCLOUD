@@ -16,6 +16,10 @@ spring:
           predicates:
             - Path=/login
             - After=2023-05-29T09:59:48.455+08:00[Asia/Shanghai]
+        - id: test-teacher
+          uri: http://localhost:8106
+          predicates:
+            - Path=/teacher
         - id: dance-id
           uri: https://www.bilibili.com
           predicates:
