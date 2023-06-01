@@ -24,7 +24,6 @@ public class LoginController {
         User user = User.builder().age(1).name("1").pwd("1").id(1).build();
         String token = UUID.randomUUID().toString();
         stringRedisTemplate.opsForValue().set(token,user.toString(),Duration.ofSeconds(7200));
-        int a = 10;
         String w = stringRedisTemplate.opsForValue().get(token);
         System.out.println(w);
         return token;
@@ -35,6 +34,11 @@ public class LoginController {
         System.out.println("name = " + name);
         System.out.println("pwd = " + pwd);
         return "老师好";
+    }
+
+    @GetMapping("/success")
+    public String success(){
+        return "这次真的成了";
     }
 
 
