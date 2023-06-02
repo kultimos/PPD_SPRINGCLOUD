@@ -25,6 +25,12 @@ spring:
           predicates:
             - Path=/login
             - After=2023-05-29T09:59:48.455+08:00[Asia/Shanghai]
+          filters:
+            - name: RequestRateLimiter
+              args:
+                key-resolver: '#{@apiKeyResolver}'
+                redis-rate-limiter.replenishRate: 1
+                redis-rate-limiter.burstCapacity: 3
         - id: test-teacher
           uri: http://localhost:8106
           predicates:
