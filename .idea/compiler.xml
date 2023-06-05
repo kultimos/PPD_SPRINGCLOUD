@@ -8,6 +8,7 @@
       <directory url="file://$PROJECT_DIR$/hystrix/retry-feign/common-api/src/main/resources/archetype-resources" includeSubdirectories="true" />
       <directory url="file://$PROJECT_DIR$/hystrix/retry-feign/userserver-center/src/main/resources/archetype-resources" includeSubdirectories="true" />
       <directory url="file://$PROJECT_DIR$/hystrix/retry-feign/orderserver-center/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/nacos/src/main/resources/archetype-resources" includeSubdirectories="true" />
     </excludeFromCompile>
     <annotationProcessing>
       <profile name="Maven default annotation processors profile" enabled="true">
@@ -15,7 +16,6 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="user-service-01" />
-        <module name="springcloud" />
         <module name="restTemplate" />
         <module name="rent-car-service-01" />
         <module name="eureka" />
@@ -25,20 +25,23 @@
         <module name="water-bear" />
         <module name="eureka-client-02-b" />
         <module name="user-service" />
+        <module name="nacos" />
         <module name="customer-service-01" />
         <module name="provider-b-01" />
         <module name="root" />
         <module name="orderserver-center" />
         <module name="consumer" />
-        <module name="login-service" />
         <module name="openfeign" />
+        <module name="login-service" />
         <module name="hystrix" />
         <module name="eureka-server-01" />
         <module name="customer-service" />
+        <module name="02-nacos-client-b" />
         <module name="rest-template" />
         <module name="userserver-center" />
         <module name="ribbon" />
         <module name="rent-car-service" />
+        <module name="01-nacos-client-a" />
         <module name="eureka-server-02" />
         <module name="consumer-02" />
         <module name="eureka-server-03" />
@@ -86,6 +89,7 @@
       <module name="gateway-server" options="-parameters" />
       <module name="hystrix" options="-parameters" />
       <module name="login-service" options="-parameters" />
+      <module name="nacos" options="-parameters" />
       <module name="openfeign" options="-parameters" />
       <module name="order-center" options="-parameters" />
       <module name="order-service" options="-parameters" />
@@ -104,7 +108,7 @@
       <module name="ribbon" options="-parameters" />
       <module name="root" options="-parameters" />
       <module name="server-api" options="-parameters" />
-      <module name="springcloud" options="-parameters" />
+      <module name="springcloud" options="" />
       <module name="user-center" options="-parameters" />
       <module name="user-conter" options="-parameters" />
       <module name="user-manage" options="-parameters" />

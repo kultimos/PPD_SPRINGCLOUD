@@ -6,7 +6,10 @@
 	<groupId>com.kul</groupId>
 	<artifactId>root</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+    <modules>
+        <module>nacos</module>
+    </modules>
+    <packaging>pom</packaging>
 
 	<name>root</name>
 	<description>Demo project for Spring Boot</description>
