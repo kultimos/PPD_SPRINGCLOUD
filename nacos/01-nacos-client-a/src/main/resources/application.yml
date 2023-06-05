@@ -9,3 +9,5 @@ spring:
         server-addr: localhost:8848
         username: nacos
         password: nacos
+        namespace: ef27b2f3-9759-43cf-b02e-097bf622c493
+        group: A-GROUP
