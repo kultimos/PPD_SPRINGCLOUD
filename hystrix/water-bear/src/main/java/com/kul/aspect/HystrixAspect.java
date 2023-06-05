@@ -38,11 +38,11 @@ public class HystrixAspect {
                 } catch (Throwable e) {
                     //说明调用失败
                     hystrixModel.addFailCount();
-                    return "远程服务宕机,所以调用失败了";
+                    return "远程服务宕机,所以调用失败了 : " + hystrixModel.getStatus();
                 }
             case OPEN:
                 //断路器开启,无法调用
-                return "断路器触发,所以调用失败了";
+                return "开启 : "+hystrixModel.getStatus();
 
             case HALF_OPEN:
                 //分流,少许流量去调用服务
@@ -59,7 +59,7 @@ public class HystrixAspect {
                         return "分流请求,但是调用失败了";
                     }
                 }
-                return "断路器触发,所以调用失败了";
+                return "原因是我" + hystrixModel.getStatus();
             default:
                 return "默认情况";
         }
