@@ -39,6 +39,7 @@
         <option value="$PROJECT_DIR$/nacos/03-gateway/pom.xml" />
         <option value="$PROJECT_DIR$/nacos/04-nacos-config-a/pom.xml" />
         <option value="$PROJECT_DIR$/nacos/05-nacos-config-test/pom.xml" />
+        <option value="$PROJECT_DIR$/nacos/06-nacos-config-public/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

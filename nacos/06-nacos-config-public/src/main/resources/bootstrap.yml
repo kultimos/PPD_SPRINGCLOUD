@@ -1,0 +1,19 @@
+server:
+  port: 8020
+spring:
+  application:
+    name: nacos-config-public
+  cloud:
+    nacos:
+      config:
+        server-addr: localhost:8848
+        username: nacos
+        password: nacos
+        namespace: 6e84f4a7-8f59-4a2f-a4a0-7b4c5a69222d #目前读取多配置文件的方式只支持在同一个命名空间下
+        prefix: user-center-dev #配置文件的前缀 前缀和后缀必须同时存在
+        file-extension: yml #配置文件的后缀
+        shared-configs: #共享配置,一般是存放一些所有工程都共享的配置文件,必须属于DEFAULT_GROUP
+          - data-id: public-data.yml
+            group: DEFAULT_GROUP
+            refresh: true
+

@@ -33,6 +33,8 @@
     <file url="file://$PROJECT_DIR$/nacos/04-nacos-config-a/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/nacos/05-nacos-config-test/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/nacos/05-nacos-config-test/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/nacos/06-nacos-config-public/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/nacos/06-nacos-config-public/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/nacos/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/openfeign/order-service-01/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/openfeign/src/main/java" charset="UTF-8" />

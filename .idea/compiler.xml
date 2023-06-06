@@ -42,6 +42,7 @@
         <module name="userserver-center" />
         <module name="ribbon" />
         <module name="rent-car-service" />
+        <module name="06-nacos-config-public" />
         <module name="01-nacos-client-a" />
         <module name="eureka-server-02" />
         <module name="consumer-02" />
