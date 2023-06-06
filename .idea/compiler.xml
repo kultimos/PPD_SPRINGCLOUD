@@ -49,6 +49,7 @@
         <module name="order-service-01" />
         <module name="provider-a-01" />
         <module name="04-nacos-config-a" />
+        <module name="05-nacos-config-test" />
         <module name="admin-server" />
         <module name="gateway-server" />
         <module name="order-service" />

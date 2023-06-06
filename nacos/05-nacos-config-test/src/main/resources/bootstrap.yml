@@ -1,0 +1,20 @@
+server:
+  port: 8018
+spring:
+  application:
+    name: nacos-config-test
+  cloud:
+    nacos:
+      config:
+        server-addr: localhost:8848
+        username: nacos
+        password: nacos
+        namespace: 6e84f4a7-8f59-4a2f-a4a0-7b4c5a69222d #目前读取多配置文件的方式只支持在同一个命名空间下
+        extension-configs:
+          - data-id: user-center-dev.yml
+            group: A_GROUP
+            refresh: true #支持动态刷新
+          - data-id: member-center-dev.yml
+            group: B_GROUP
+            refresh: false  #不支持动态刷新
+            #需要注意无论是否支持动态刷新,大前提都是需要在读取配置项的那个类中存在@RefreshScope注解
