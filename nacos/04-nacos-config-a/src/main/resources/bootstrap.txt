@@ -1,0 +1,13 @@
+server:
+  port: 8116
+spring:
+  application:
+    name: nacos-config-a
+  cloud:
+    nacos:
+      config:
+        server-addr: localhost:8848
+        username: nacos
+        password: nacos
+        prefix: nacos-config-a #表示读哪个配置文件,对应配置管理中对应命名空间下,对应组中的 Data Id
+        file-extension: yaml #表示配置文件的类型

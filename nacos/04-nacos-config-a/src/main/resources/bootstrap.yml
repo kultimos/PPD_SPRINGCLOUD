@@ -1,0 +1,14 @@
+server:
+  port: 8116
+spring:
+  application:
+    name: nacos-config-a
+  cloud:
+    nacos:
+      config:
+        server-addr: localhost:8848
+        username: nacos
+        password: nacos
+        prefix: nacos-config-a
+        file-extension: yaml
+

@@ -48,6 +48,7 @@
         <module name="eureka-server-03" />
         <module name="order-service-01" />
         <module name="provider-a-01" />
+        <module name="04-nacos-config-a" />
         <module name="admin-server" />
         <module name="gateway-server" />
         <module name="order-service" />
