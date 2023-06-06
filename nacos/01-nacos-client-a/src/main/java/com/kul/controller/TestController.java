@@ -1,5 +1,6 @@
 package com.kul.controller;
 
+import com.kul.config.aFeign;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
@@ -14,10 +15,14 @@ public class TestController {
     @Autowired
     private DiscoveryClient discoveryClient;
 
+    @Autowired
+    private aFeign aFeign;
+
     @GetMapping("/test")
     public String test() {
-        List<ServiceInstance> instances = discoveryClient.getInstances("nacos-client-b");
-        System.out.println(instances);
-        return "test";
+        String a = aFeign.info();
+        return a;
     }
+
+
 }

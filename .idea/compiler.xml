@@ -25,6 +25,7 @@
         <module name="water-bear" />
         <module name="eureka-client-02-b" />
         <module name="user-service" />
+        <module name="03-gateway" />
         <module name="nacos" />
         <module name="customer-service-01" />
         <module name="provider-b-01" />

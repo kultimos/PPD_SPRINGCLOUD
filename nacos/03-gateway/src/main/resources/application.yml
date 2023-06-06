@@ -1,8 +1,8 @@
 server:
-  port: 8113
+  port: 80
 spring:
   application:
-    name: nacos-client-b
+    name: alibaba-gateway
   cloud:
     nacos:
       discovery:
@@ -11,3 +11,9 @@ spring:
         password: nacos
         namespace: ef27b2f3-9759-43cf-b02e-097bf622c493
         group: A-GROUP
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+
